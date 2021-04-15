@@ -7,8 +7,22 @@
 # 9:00~22:00
 
 def register(start_at, minutes)
-  # start_at -> int 1200
+  # start_at -> int 1230
+  #分割処理
+  hour=12
+  min=30
+  #minutesが60
+
+  a = minutes/15 #4
+
+  a.times |i| do 
+    b = min/15 unless min=0
+
+    day_db[hour][b]
+  end
+  day_db[hour,min]=1
   # minutes -> int 15, 30, 90
+  day_db = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
   counter = 0
   registered_time = {}
   if minutes.include([15, 30, 60])
